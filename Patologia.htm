@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patologia Veterinária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Patologia.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#casa"><i class="fas fa-home"></i> Casa</a></li>
+            <li>
+                <a href="#patologia" onclick="toggleSubmenu(event, 'patologia-submenu')"><i class="fas fa-paw"></i> Patologia Veterinária</a>
+                <ul id="patologia-submenu">
+                    <li><a href="#cinomose"><i class="fas fa-virus"></i> Cinomose Canina</a></li>
+                    <li><a href="#leptospirose"><i class="fas fa-water"></i> Leptospirose Canina</a></li>
+                    <li><a href="#parvovirose"><i class="fas fa-bacteria"></i> Parvovirose Canina</a></li>
+                    <li><a href="#coronavirose"><i class="fas fa-viruses"></i> Coronavirose Canina</a></li>
+                    <li><a href="#hepatite"><i class="fas fa-liver"></i> Hepatite Infecciosa</a></li>
+                    <li><a href="#adenovirose"><i class="fas fa-lungs"></i> Adenovirose Respiratória</a></li>
+                    <li><a href="#parainfluenza"><i class="fas fa-lungs-virus"></i> Parainfluenza Canina</a></li>
+                    <li><a href="#tosse-canis"><i class="fas fa-dog"></i> Tosse dos Canis</a></li>
+                    <li><a href="#raiva"><i class="fas fa-skull-crossbones"></i> Raiva Canina</a></li>
+                    <li><a href="#giardiase"><i class="fas fa-parasite"></i> Giardíase Canina</a></li>
+                </ul>
+            </li>
+            <li><a href="#ficha"><i class="fas fa-file-alt"></i> Ficha Veterinária</a></li>
+            <li><a href="#produtos"><i class="fas fa-cube"></i> Produtos</a></li>
+            <li><a href="#consultorios"><i class="fas fa-clinic-medical"></i> Consultórios Veterinários</a></li>
+            <li><a href="#conta"><i class="fas fa-user"></i> Conta</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Catálogo de Doenças Caninas</h2>
+
+        <div id="cinomose" class="disease">
+            <h3>Cinomose Canina</h3>
+            <p>A cinomose é uma das doenças mais temidas pelos tutores de cães. Altamente infecciosa e frequentemente fatal, é causada por um vírus que se espalha pelo contato direto com secreções nasais e oculares, tosse e espirros de animais infectados.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Diarreia</li>
+                <li>Vômito</li>
+                <li>Corrimento nasal e ocular</li>
+                <li>Tosse</li>
+                <li>Tiques nervosos</li>
+                <li>Convulsões e paralisias</li>
+            </ul>
+            <p>A melhor forma de prevenir a cinomose é por meio da vacinação. Consulte um médico-veterinário para manter a vacinação do seu pet em dia.</p>
+        </div>
+
+        <div id="leptospirose" class="disease">
+            <h3>Leptospirose Canina</h3>
+            <p>A leptospirose canina é uma doença com alto índice de mortalidade, causada por bactérias que podem também infectar humanos. A transmissão ocorre principalmente pelo contato com a urina de animais doentes, como cães e ratos.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Falta de apetite</li>
+                <li>Febre</li>
+                <li>Hemorragia</li>
+                <li>Icterícia</li>
+                <li>Vômito</li>
+                <li>Urina de cor amarronzada</li>
+            </ul>
+            <p>Para prevenção, é essencial manter a vacinação do seu pet em dia, conforme orientações de um médico-veterinário.</p>
+        </div>
+
+        <div id="parvovirose" class="disease">
+            <h3>Parvovirose Canina</h3>
+            <p>A parvovirose é uma doença viral que ataca o sistema digestivo e o sistema imunológico dos cães, afetando principalmente filhotes. A transmissão ocorre pelo contato direto com fezes de animais infectados.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Vômitos</li>
+                <li>Diarreia com sangue</li>
+                <li>Febre</li>
+                <li>Apatia</li>
+                <li>Falta de apetite</li>
+            </ul>
+            <p>A vacinação anual e a correta higienização do ambiente onde viveram animais doentes são fundamentais, pois o vírus é resistente e pode sobreviver por meses.</p>
+        </div>
+
+        <div id="coronavirose" class="disease">
+            <h3>Coronavirose Canina</h3>
+            <p>A coronavirose canina é uma doença viral altamente contagiosa que afeta os intestinos dos cães, provocando diarreia e vômito. É comum em locais onde há grande concentração de animais.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Vômitos</li>
+                <li>Diarreia</li>
+                <li>Febre</li>
+                <li>Falta de apetite</li>
+            </ul>
+        </div>
+
+        <div id="hepatite" class="disease">
+            <h3>Hepatite Infecciosa Canina</h3>
+            <p>A hepatite infecciosa canina é uma doença aguda que acomete o fígado, causada por um vírus transmitido por secreções orais e nasais, fezes e contato com ambientes contaminados.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Febre</li>
+                <li>Perda de apetite</li>
+                <li>Dor abdominal</li>
+                <li>Inchaço na região do fígado</li>
+                <li>Icterícia (pele e mucosas amareladas)</li>
+            </ul>
+        </div>
+
+        <div id="adenovirose" class="disease">
+            <h3>Adenovirose Respiratória Canina</h3>
+            <p>A adenovirose é uma infecção respiratória causada pelo adenovírus tipo 2, que também pode predispor à tosse dos canis. A transmissão ocorre principalmente por secreções respiratórias.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Tosse seca e persistente</li>
+                <li>Espirros</li>
+                <li>Febre</li>
+                <li>Corrimento nasal</li>
+            </ul>
+        </div>
+
+        <div id="parainfluenza" class="disease">
+            <h3>Parainfluenza Canina</h3>
+            <p>A parainfluenza canina é uma infecção respiratória viral que contribui para a "tosse dos canis", sendo altamente contagiosa.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Tosse seca</li>
+                <li>Espirros</li>
+                <li>Febre</li>
+                <li>Falta de apetite</li>
+            </ul>
+        </div>
+
+        <div id="tosse-canis" class="disease">
+            <h3>Tosse dos Canis</h3>
+            <p>A tosse dos canis, ou traqueobronquite infecciosa canina, é uma doença altamente contagiosa que afeta o sistema respiratório. É causada por uma combinação de bactérias e vírus.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Tosse súbita, que se assemelha a um engasgo</li>
+                <li>Espirros</li>
+                <li>Secreção nasal e ocular</li>
+            </ul>
+            <p>A pneumonia é uma complicação comum. A vacinação e a desinfecção adequada do ambiente são recomendadas para prevenção.</p>
+        </div>
+
+        <div id="raiva" class="disease">
+            <h3>Raiva Canina</h3>
+            <p>A raiva é uma zoonose fatal, transmitida principalmente pela mordida de animais infectados, como cães, gatos e morcegos. O vírus da raiva afeta o sistema nervoso, causando alterações de comportamento que podem variar de extrema excitação a depressão.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Excitação</li>
+                <li>Agressividade</li>
+                <li>Medo</li>
+                <li>Depressão</li>
+                <li>Ansiedade</li>
+                <li>Dificuldade de engolir</li>
+                <li>Salivação excessiva</li>
+            </ul>
+        </div>
+
+        <div id="giardiase" class="disease">
+            <h3>Giardíase Canina</h3>
+            <p>A giardíase é uma doença causada pelo protozoário Giardia lamblia, que vive no intestino delgado dos cães. É altamente contagiosa e pode ser transmitida a outros animais e humanos.</p>
+            <h4>Sintomas:</h4>
+            <ul>
+                <li>Fezes moles com odor forte</li>
+                <li>Vômitos</li>
+                <li>Desidratação</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="Patologia.js"> </script>
+
+</body>
+</html>

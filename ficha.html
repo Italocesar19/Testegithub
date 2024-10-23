@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Veterinária</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <h2>Ficha Veterinária</h2>
+
+    <form id="ficha-veterinaria">
+        <!-- Informações do Proprietário -->
+        <div class="section">
+            <h3>Informações do Proprietário</h3>
+            <label for="nome_proprietario">Nome:</label>
+            <input type="text" id="nome_proprietario" name="nome_proprietario" required>
+
+            <label for="endereco_proprietario">Endereço:</label>
+            <input type="text" id="endereco_proprietario" name="endereco_proprietario" required>
+
+            <label for="telefone_proprietario">Telefone:</label>
+            <input type="tel" id="telefone_proprietario" name="telefone_proprietario" required>
+        </div>
+
+        <!-- Informações do Animal -->
+        <div class="section">
+            <h3>Informações do Animal</h3>
+            <label for="nome_animal">Nome do Animal:</label>
+            <input type="text" id="nome_animal" name="nome_animal" required>
+
+            <label for="especie_animal">Espécie:</label>
+            <select id="especie_animal" name="especie_animal" required>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label for="raca_animal">Raça:</label>
+            <input type="text" id="raca_animal" name="raca_animal" required>
+
+            <label for="idade_animal">Idade:</label>
+            <input type="number" id="idade_animal" name="idade_animal" required class="small-input">
+
+            <label for="sexo_animal">Sexo:</label>
+            <select id="sexo_animal" name="sexo_animal" required class="small-input">
+                <option value="macho">Macho</option>
+                <option value="femea">Fêmea</option>
+            </select>
+
+            <label for="historico_medico_animal">Histórico Médico:</label>
+            <textarea id="historico_medico_animal" name="historico_medico_animal" rows="4"></textarea>
+        </div>
+
+        <!-- Informações sobre Vacinações -->
+        <div class="section">
+            <h3>Vacinações</h3>
+            <label for="vacinacoes">Lista de Vacinas:</label>
+            <textarea id="vacinacoes" name="vacinacoes" rows="4"></textarea>
+
+            <label for="ultima_vacinacao">Última Vacinação (Data):</label>
+            <input type="date" id="ultima_vacinacao" name="ultima_vacinacao" class="small-input">
+        </div>
+
+        <!-- Observações -->
+        <div class="section">
+            <h3>Observações</h3>
+            <label for="observacoes">Observações Adicionais:</label>
+            <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+        </div>
+
+        <button type="button" onclick="salvarFicha()">Salvar Ficha</button>
+    </form>
+
+    <script src="func.js"></script>
+
+</body>
+</html>

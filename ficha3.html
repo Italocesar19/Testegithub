@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Veterinária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+        }
+        /* Estilo para a barra lateral */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffd80a;
+            padding-top: 20px;
+            transition: width 0.3s ease;
+        }
+        .sidebar:hover {
+            width: 300px;
+        }
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #ffd80a;
+        }
+        .sidebar a i {
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+        .sidebar a:hover i {
+            transform: rotate(360deg);
+        }
+        /* Estilo para o conteúdo principal */
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+            width: calc(100% - 260px);
+            transition: margin-left 0.3s ease;
+        }
+        .sidebar:hover + .content {
+            margin-left: 310px;
+            width: calc(100% - 310px);
+        }
+        h2 {
+            text-align: center;
+            color: #ffd80a;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .small-input {
+            width: 48%;
+            display: inline-block;
+        }
+        .small-input + .small-input {
+            margin-left: 4%;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #ffd80a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ffd80a;
+            color: white;
+        }
+        .section {
+            margin-top: 30px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        /* Estilo para o preview da imagem */
+        .image-preview {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-preview img {
+            max-width: 100%;
+            max-height: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <a href="#casa"><i class="fas fa-home"></i> Casa</a>
+        <a href="#patologia"><i class="fas fa-paw"></i> Patologia Veterinária</a>
+        <a href="#ficha"><i class="fas fa-file-alt"></i> Ficha Veterinária</a>
+        <a href="#produtos"><i class="fas fa-cube"></i> Produtos</a>
+        <a href="#consultorios"><i class="fas fa-clinic-medical"></i> Consultórios Veterinários</a>
+        <a href="#conta"><i class="fas fa-user"></i> Conta</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h2>Ficha Veterinária</h2>
+
+        <form id="ficha-veterinaria">
+            <!-- Informações do Proprietário -->
+            <div class="section">
+                <h3>Informações do Proprietário</h3>
+                <label for="nome_proprietario">Nome:</label>
+                <input type="text" id="nome_proprietario" name="nome_proprietario" required>
+
+                <label for="endereco_proprietario">Endereço:</label>
+                <input type="text" id="endereco_proprietario" name="endereco_proprietario" required>
+
+                <label for="telefone_proprietario">Telefone:</label>
+                <input type="tel" id="telefone_proprietario" name="telefone_proprietario" required>
+            </div>
+
+            <!-- Informações do Animal -->
+            <div class="section">
+                <h3>Informações do Animal</h3>
+                <label for="nome_animal">Nome do Animal:</label>
+                <input type="text" id="nome_animal" name="nome_animal" required>
+
+                <label for="especie_animal">Espécie:</label>
+                <select id="especie_animal" name="especie_animal" required>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="raca_animal">Raça:</label>
+                <input type="text" id="raca_animal" name="raca_animal" required>
+
+                <label for="idade_animal">Idade:</label>
+                <input type="number" id="idade_animal" name="idade_animal" required class="small-input">
+
+                <label for="sexo_animal">Sexo:</label>
+                <select id="sexo_animal" name="sexo_animal" required class="small-input">
+                    <option value="macho">Macho</option>
+                    <option value="femea">Fêmea</option>
+                </select>
+
+                <label for="historico_medico_animal">Histórico Médico:</label>
+                <textarea id="historico_medico_animal" name="historico_medico_animal" rows="4"></textarea>
+
+                <!-- Campo para foto do animal -->
+                <label for="foto_animal">Foto do Animal:</label>
+                <input type="file" id="foto_animal" name="foto_animal" accept="image/*" onchange="previewImage(event)">
+                <div class="image-preview" id="image-preview">
+                    <!-- A imagem será exibida aqui -->
+                </div>
+            </div>
+
+            <!-- Informações sobre Vacinações -->
+            <div class="section">
+                <h3>Vacinações</h3>
+                <label for="vacinacoes">Lista de Vacinas:</label>
+                <textarea id="vacinacoes" name="vacinacoes" rows="4"></textarea>
+
+                <label for="ultima_vacinacao">Última Vacinação (Data):</label>
+                <input type="date" id="ultima_vacinacao" name="ultima_vacinacao" class="small-input">
+            </div>
+
+            <!-- Observações -->
+            <div class="section">
+                <h3>Observações</h3>
+                <label for="observacoes">Observações Adicionais:</label>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+            </div>
+
+            <button type="button" onclick="salvarFicha()">Salvar Ficha</button>
+        </form>
+    </div>
+
+    <script>
+        function salvarFicha() {
+            const nomeProprietario = document.getElementById('nome_proprietario').value;
+            const enderecoProprietario = document.getElementById('endereco_proprietario').value;
+            const telefoneProprietario = document.getElementById('telefone_proprietario').value;
+            const nomeAnimal = document.getElementById('nome_animal').value;
+            const especieAnimal = document.getElementById('especie_animal').value;
+            const racaAnimal = document.getElementById('raca_animal').value;
+            const idadeAnimal = document.getElementById('idade_animal').value;
+            const sexoAnimal = document.getElementById('sexo_animal').value;
+            const historicoMedicoAnimal = document.getElementById('historico_medico_animal').value;
+            const vacinacoes = document.getElementById('vacinacoes').value;
+            const ultimaVacinacao = document.getElementById('ultima_vacinacao').value;
+            const observacoes = document.getElementById('observacoes').value;
+
+            const ficha = `Informações do Proprietário:\nNome: ${nomeProprietario}\nEndereço: ${enderecoProprietario}\nTelefone: ${telefoneProprietario}\n\n` +
+                          `Informações do Animal:\nNome: ${nomeAnimal}\nEspécie: ${especieAnimal}\nRaça: ${racaAnimal}\nIdade: ${idadeAnimal}\nSexo: ${sexoAnimal}\n\n` +
+                          `Histórico Médico:\n${historicoMedicoAnimal}\n\nVacinações:\n${vacinacoes}\nÚltima Vacinação: ${ultimaVacinacao}\n\n` +
+                          `Observações Adicionais:\n${observacoes}`;
+
+            const blob = new Blob([ficha], { type: 'text/plain;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `ficha_veterinaria_${nomeAnimal}.txt`;
+            link.click();
+
+            alert("Ficha veterinária salva com sucesso!");
+        }
+
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const preview = document.getElementById('image-preview');
+                preview.innerHTML = `<img src="${e.target.result}" alt="Foto do Animal">`;
+            }
+            reader.readAsDataURL(file);
+        }
+    </script>
+
+</body>
+</html>
